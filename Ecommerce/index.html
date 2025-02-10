@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ShopWave - Explore Products</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="logo">Steve's Ecommerce</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">🏠 Home</a></li>
+            <li class="cart-container">
+                <a href="cart.html">🛒 Cart</a>
+                <span id="cart-badge" class="cart-badge" style="display: none;">0</span>
+            </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="product-header">
+            <h2>Discover Our Products</h2>
+            <div class="filter-container">
+                <label>
+                    Category:
+                    <select id="category-filter"></select>
+                </label>
+                <label>
+                    Sort by Price:
+                    <select id="sort-products">
+                        <option value="">Default</option>
+                        <option value="price-asc">Low to High</option>
+                        <option value="price-desc">High to Low</option>
+                    </select>
+                </label>
+            </div>
+        </section>
+
+        <section id="product-list" class="product-grid"></section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Steve's Ecommerce. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
