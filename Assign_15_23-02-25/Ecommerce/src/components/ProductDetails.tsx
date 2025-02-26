@@ -7,10 +7,10 @@ import "../styles/ProductDetails.css";
 
 const ProductDetails = () => {
   const { state, dispatch } = useContext(GlobalContext);
-  const { id } = useParams(); // ✅ Get product ID from URL
-  const productId = Number(id); // Convert to number
+  const { id } = useParams(); 
+  const productId = Number(id); 
 
-  // ✅ Fetch product details using useQuery
+  
   const { data: product, isLoading, error } = useQuery({
     queryKey: ["product", productId],
     queryFn: () => fetchProductById(productId),
