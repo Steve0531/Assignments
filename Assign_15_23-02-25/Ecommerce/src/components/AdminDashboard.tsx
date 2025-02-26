@@ -1,7 +1,7 @@
 import { useContext, useState } from "react";
 import { useMutation } from "@tanstack/react-query";
 import { GlobalContext } from "../context/GlobalContext";
-import { addProduct, updateProduct } from "../api/products"; // Import update API
+import { addProduct, updateProduct } from "../api/products"; 
 import "../styles/AdminDashboard.css";
 import { IProducts } from "../types/types";
 
@@ -46,14 +46,14 @@ const AdminDashboard = () => {
   
 
   const handleUpdateProduct = () => {
-    if (!editingProduct) return; // Ensure editingProduct is not null
+    if (!editingProduct) return; 
   
     updateMutation.mutate({
       id: editingProduct.id,
       product: editingProduct,
     });
   
-    setEditingProduct(null); // Reset after update
+    setEditingProduct(null); 
   };
 
   const handleDeleteProduct = (id: number) => {
@@ -128,7 +128,7 @@ const AdminDashboard = () => {
         </div>
       )}
 
-      {/* Product List */}
+      
       <div className="product-list">
         {state.products.map((product) => (
           <div key={product.id} className="product-item">
